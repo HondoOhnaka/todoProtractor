@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "jasmine-reporters": "^2.2.0",
+    "jasmine-spec-reporter": "^2.7.0",
+    "mkdirp": "^0.5.1",
+    "protractor": "^4.0.9"
+  }
+}
