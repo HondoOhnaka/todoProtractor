@@ -8,21 +8,20 @@ describe('creating todos', function () {
     });
 
     it('should create a todo', function () {
-        todoPage.typeText('test todo 1');
+        todoPage.addTodo('test todo 1');
 
-        expect(todoPage.todoElementAt(0).getText()).toEqual('test todo 1')
+        expect(todoPage.getTodoText(0)).toEqual('test todo 1')
     });
 
     it('should create multiple todos', function () {
-        todoPage.typeText('test todo 2');
-        todoPage.typeText('test todo 3');
+        todoPage.addTodo('test todo 2');
+        todoPage.addTodo('test todo 3');
 
-        expect(todoPage.todoElementAt(1).getText()).toEqual('test todo 2')
-        expect(todoPage.todoElementAt(2).getText()).toEqual('test todo 3')
-
+        expect(todoPage.getTodoText(1)).toEqual('test todo 2')
+        expect(todoPage.getTodoText(2)).toEqual('test todo 3')
     });
 
-    it('should show how many left', function () {
-
+    it('should increment how many left', function () {
+        expect(todoPage.todoCount.getText()).toEqual('3');
     });
-}); //create
+});
